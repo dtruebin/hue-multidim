@@ -1,0 +1,24 @@
+{
+  "name": "Dimmer Btn4 Long released",
+  "status": "enabled",
+  "conditions": [
+    {
+      "address": "/sensors/DIMMER_SENSOR_ID/state/buttonevent",
+      "operator": "eq",
+      "value": "4003"
+    },
+    {
+      "address": "/sensors/DIMMER_SENSOR_ID/state/lastupdated",
+      "operator": "dx"
+    }
+  ],
+  "actions": [
+    {
+      "address": "/groups/OUTER_GROUP_ID/action",
+      "method": "PUT",
+      "body": {
+        "bri_inc": 0
+      }
+    }
+  ]
+}

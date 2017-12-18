@@ -1,0 +1,7 @@
+#!/bin/bash
+
+HUB_IP="192.168.0.100"
+API_KEY="replace_with_your_hue_api_key"
+OUTER_GROUP_ID="1"
+INNER_GROUP_ID="2"
+DIMMER_SENSOR_ID="9"

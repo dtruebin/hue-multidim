@@ -1,0 +1,26 @@
+{
+  "name": "Dimmer Btn2 Hold",
+  "status": "enabled",
+  "conditions": [
+    {
+      "address": "/sensors/DIMMER_SENSOR_ID/state/buttonevent",
+      "operator": "eq",
+      "value": "2001"
+    },
+    {
+      "address": "/sensors/DIMMER_SENSOR_ID/state/lastupdated",
+      "operator": "dx"
+    }
+  ],
+  "actions": [
+    {
+      "address": "/groups/INNER_GROUP_ID/action",
+      "method": "PUT",
+      "body": {
+        "on": true,
+        "bri_inc": 56,
+        "transitiontime": 9
+      }
+    }
+  ]
+}
