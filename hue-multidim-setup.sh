@@ -1,9 +1,11 @@
 #!/bin/bash
 
 echo "Reading config..."
-if [ -r etc/hue-multidim.conf ]; then
-  . etc/hue-multidim.conf
+if [ ! -r etc/hue-multidim.conf ]; then
+  echo "Unable to read config, quitting."
+  exit 0
 fi
+. etc/hue-multidim.conf
 
 echo "Uploading dimmer rules to your Hue Bridge..."
 for RULE_NUMBER in {1..12}; do
