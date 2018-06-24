@@ -6,7 +6,7 @@ See the [wiki](https://github.com/dtruebin/hue-multidim/wiki) for additional inf
 ## Guide
 1. Create config based on the sample:
     ```bash
-    $ cp etc/hue-multidim.conf.sample hue-multidim.conf
+    $ cp etc/hue-multidim.conf.sample etc/hue-multidim.conf
     ```
 2. Open hue-multidim.conf and set variable values. If you need help identifying the correct values, refer to the following pages of Hue API documentation:
     - `HUB_IP` and `API_KEY` — [Getting Started](https://www.developers.meethue.com/documentation/getting-started),
