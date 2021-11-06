@@ -10,10 +10,10 @@ See the [wiki](https://github.com/dtruebin/hue-multidim/wiki) for additional inf
     ```
 2. Open hue-multidim.conf and set variable values. If you need help identifying the correct values, refer to the following pages of Hue API documentation:
     - `HUB_IP` and `API_KEY` — [Getting Started](https://www.developers.meethue.com/documentation/getting-started).
-    - `OUTER_GROUP_ID` and `INNER_GROUP_ID` — [Groups](https://www.developers.meethue.com/documentation/groups-api#21_get_all_groups).
-    - `DIMMER_SENSOR_ID` — [Sensors](https://www.developers.meethue.com/documentation/sensors-api#51_get_all_sensors).  
+    - `OUTER_GROUP_ID` and `INNER_GROUP_ID` — [Groups](https://developers.meethue.com/develop/hue-api/groupds-api/#get-all-groups).
+    - `DIMMER_SENSOR_ID` — [Sensors](https://developers.meethue.com/develop/hue-api/5-sensors-api/#get-all-sensors).  
     Among your sensors, look for the one having `"type": "ZLLSwitch"`.
-    - `FIRST_RULE_ID` — [Rules](https://developers.meethue.com/documentation/rules-api#61_get_all_rules).  
+    - `FIRST_RULE_ID` — [Rules](https://developers.meethue.com/develop/hue-api/6-rules-api/#get-all-rules).  
     Among your rules, look for the one having `"name": "Dimmer Switch X on0"`. This rule will exist, provided you already set up your Hue Dimmer switch using the app. The script will update 12 consecutive rules beginning with this rule.
 3. Run the script:
     ```bash
